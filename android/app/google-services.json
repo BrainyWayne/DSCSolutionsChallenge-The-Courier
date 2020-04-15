@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "669413868971",
+    "firebase_url": "https://proximadelivery.firebaseio.com",
+    "project_id": "proximadelivery",
+    "storage_bucket": "proximadelivery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669413868971:android:eafa8a6a289212a5897eee",
+        "android_client_info": {
+          "package_name": "com.proxima.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669413868971-cbhd03u8h6cmqkfm2na297cl3qf9cl3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOxXTEhGalGM_zxs_QdIzHQ1ZO3Fk6XQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669413868971-cbhd03u8h6cmqkfm2na297cl3qf9cl3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669413868971:android:c5a11ec8cdadcd01897eee",
+        "android_client_info": {
+          "package_name": "com.proximalabs.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669413868971-cbhd03u8h6cmqkfm2na297cl3qf9cl3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOxXTEhGalGM_zxs_QdIzHQ1ZO3Fk6XQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669413868971-cbhd03u8h6cmqkfm2na297cl3qf9cl3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
