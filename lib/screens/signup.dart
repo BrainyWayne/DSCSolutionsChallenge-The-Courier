@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:delivery/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -41,25 +42,13 @@ class _SignupState extends State<Signup> {
           Container(
             height: double.infinity,
             width: double.infinity,
-            child: Container(
-              height: double.infinity,
-              width: double.infinity,
-              child: Image.asset("assets/cm3.jpeg",
-                  fit: BoxFit.cover),
-            ),
+            child: Image.asset("assets/images/courier.png", fit: BoxFit.cover,),
           ),
+
           Container(
-            height: double.infinity,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.white.withOpacity(0.8),
-                  Colors.white.withOpacity(0.8)
-                ],
-              ),
-            ),
+            color: white05,
           ),
+
           Align(
             alignment: Alignment.bottomCenter,
             child: SingleChildScrollView(

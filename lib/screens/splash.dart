@@ -42,6 +42,16 @@ class _SplashScreenState extends State<SplashScreen> {
           children: <Widget>[
 
 
+            Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: Image.asset("assets/images/courier.png", fit: BoxFit.cover,),
+            ),
+
+            Container(
+              color: white05,
+            ),
+
             Center(
               child: AnimatedContainer(
                 duration: Duration(milliseconds: 1000),

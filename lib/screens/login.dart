@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:delivery/main.dart';
 import 'package:flutter/material.dart';
 
 import 'Home.dart';
@@ -36,31 +37,28 @@ class _LoginState extends State<Login> {
         body: Stack(
           children: <Widget>[
             Container(
-                height: double.infinity,
-                width: double.infinity,
-                child: Container(
-                    height: double.infinity,
-                    width: double.infinity,
-                    child:
-                        Image.asset("assets/cm3.jpeg", fit: BoxFit.cover))),
-            Container(
               height: double.infinity,
               width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.red.withOpacity(0.3),
-                    Colors.orange.withOpacity(0.3)
-                  ],
-                ),
-              ),
+              child: Image.asset("assets/images/courier.png", fit: BoxFit.cover,),
             ),
+
+            Container(
+              color: white05,
+            ),
+
             Align(
               alignment: Alignment.bottomCenter,
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text("An", style: TextStyle(fontSize: 24, color: blackColor),),
+                        Text("Courier", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: blackColor),)
+                      ],
+                    ),
                     SizedBox(
                       height: 10,
                     ),

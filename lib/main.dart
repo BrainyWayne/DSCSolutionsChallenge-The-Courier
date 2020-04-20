@@ -34,7 +34,7 @@ Color greyColor = Colors.grey;
 Color darkRed =  Color(0xffB30000);
 Color whiteColor = Colors.black;
 Color blackColor = Colors.white;
-Color white05 = Colors.white.withOpacity(0.9);
+Color white05 = Colors.white.withOpacity(0.7);
 bool darkModeEnabled = false;
 
 
@@ -80,7 +80,8 @@ class MapSampleState extends State<MapSample> {
          darkRed =  Color(0xffB30000);
          whiteColor = Colors.black;
          blackColor = Colors.white;
-         white05 = Colors.black.withOpacity(0.9);
+         white05 = Colors.black.withOpacity(0.7);
+
 
        });
     } else if(!darkModeEnabled){
@@ -91,7 +92,7 @@ class MapSampleState extends State<MapSample> {
          darkRed =  Color(0xffB30000);
          whiteColor = Colors.white;
          blackColor = Colors.black;
-         white05 = Colors.white.withOpacity(0.9);
+         white05 = Colors.white.withOpacity(0.7);
        });
     }
 
