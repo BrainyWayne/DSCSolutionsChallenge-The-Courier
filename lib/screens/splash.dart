@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:delivery/main.dart';
 import 'package:delivery/services/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -12,44 +13,21 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-double pulseValue;
-double pulseValueGrey;
+
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 3), () {
       checkUser();
     });
 
-    pulseIn();
 
     super.initState();
   }
 
-  void pulseOut() {
-    Timer(Duration(milliseconds: 500), () {
-      setState(() {
-        setState(() {
-          pulseValue = 160;
-          pulseValueGrey = 250;
-        });
-      });
-      pulseIn();
-    });
-  }
 
-  void pulseIn() {
-    Timer(Duration(milliseconds: 500), () {
-      setState(() {
-        setState(() {
-          pulseValue = 250;
-          pulseValueGrey = 160;
-        });
-      });
-      pulseOut();
-    });
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -57,29 +35,24 @@ class _SplashScreenState extends State<SplashScreen> {
       child: AnimatedContainer(
         duration: Duration(milliseconds: 1000),
         curve: Curves.easeIn,
+        color: whiteColor,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Stack(
           children: <Widget>[
-            Container(
-                height: double.infinity,
-                width: double.infinity,
-                child: Container(
-                    height: double.infinity,
-                    width: double.infinity,
-                    child: Image.asset("assets/book.png", fit: BoxFit.cover))),
-            Container(
-              color: Colors.white.withOpacity(0.9),
-            ),
+
+
             Center(
               child: AnimatedContainer(
                 duration: Duration(milliseconds: 1000),
                 curve: Curves.easeIn,
-                height: pulseValue,
-                width: pulseValue,
-                child: Image.asset(
-                  "assets/profrancologo.png",
-                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text("An", style: TextStyle(fontSize: 24, color: blackColor),),
+                    Text("Courier", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: blackColor),)
+                  ],
+                )
               ),
             ),
           ],
