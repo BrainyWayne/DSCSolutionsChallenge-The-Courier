@@ -5,7 +5,7 @@ import 'package:clay_containers/constants.dart';
 import 'package:clay_containers/widgets/clay_containers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:custom_switch/custom_switch.dart';
-import 'package:delivery/screens/Splash.dart';
+import 'package:delivery/screens/splash.dart';
 import 'package:delivery/services/firebase_auth.dart';
 import 'package:delivery/util/globalfunctions.dart';
 import 'package:delivery/util/strings.dart';
@@ -16,7 +16,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
-import 'main.dart';
+import '../main.dart';
+
 
 
 class Home extends StatefulWidget {
@@ -399,7 +400,7 @@ class _HomeState extends State<Home> {
                       onTap: (){
                         Auth auth = new Auth();
                         auth.signOut();
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Splash()));
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => SplashScreen()));
                       },
                       child: Container(
 

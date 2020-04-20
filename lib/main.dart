@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:clay_containers/clay_containers.dart';
 import 'package:custom_switch/custom_switch.dart';
+import 'package:delivery/screens/splash.dart';
 import 'package:delivery/util/globalfunctions.dart';
 import 'package:delivery/util/strings.dart';
 import 'package:flutter/material.dart';
@@ -9,8 +10,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'Home.dart';
-import 'Splash.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -62,7 +62,7 @@ class MapSampleState extends State<MapSample> {
   @override
   Widget build(BuildContext context) {
     return new Container(
-        child: Splash(),
+        child: SplashScreen(),
     );
 
 

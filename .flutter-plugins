@@ -1,0 +1,25 @@
+# This is a generated file; do not edit or check into version control.
+cloud_firestore=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.4+2/
+cloud_firestore_web=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/
+firebase_auth=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.15.5+3/
+firebase_auth_web=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.2/
+firebase_core=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.4+3/
+firebase_core_web=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/
+firebase_messaging=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-6.0.13/
+firebase_storage=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.1.5/
+flutter_plugin_android_lifecycle=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.6/
+geolocator=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/geolocator-5.3.1/
+google_api_availability=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/google_api_availability-2.0.4/
+google_maps_flutter=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-0.5.25+3/
+image_picker=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.5/
+location_permissions=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/location_permissions-2.0.5/
+path_provider=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.5/
+path_provider_macos=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4/
+permission_handler=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler-5.0.0+hotfix.3/
+shared_preferences=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.6+3/
+shared_preferences_macos=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+6/
+shared_preferences_web=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+4/
+sqflite=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.0/
+url_launcher=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.2/
+url_launcher_macos=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-0.0.1+4/
+url_launcher_web=/Users/franciseshun/Desktop/Mobile App Development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.1+1/
