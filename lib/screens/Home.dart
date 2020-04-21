@@ -5,6 +5,7 @@ import 'package:clay_containers/constants.dart';
 import 'package:clay_containers/widgets/clay_containers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:custom_switch/custom_switch.dart';
+import 'package:delivery/screens/drawer.dart';
 import 'package:delivery/screens/splash.dart';
 import 'package:delivery/services/firebase_auth.dart';
 import 'package:delivery/util/globalfunctions.dart';
@@ -28,6 +29,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
   String _mapStyle;
   Position position;
@@ -87,6 +90,8 @@ class _HomeState extends State<Home> {
 
 
     return Scaffold(
+      key: _drawerKey,
+      drawer: NavDrawer(),
       body: Stack(
         children: <Widget>[
           Container(
@@ -291,13 +296,19 @@ class _HomeState extends State<Home> {
               margin: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
               child: Row(
                 children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        color: whiteColor,
-                        borderRadius: BorderRadius.circular(50)
+                  GestureDetector(
+
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          color: whiteColor,
+                          borderRadius: BorderRadius.circular(50)
+                      ),
+                      child: Icon(Icons.menu, color: blackColor,),
                     ),
-                    child: Icon(Icons.menu, color: blackColor,),
+                    onTap: (){
+                      _drawerKey.currentState.openDrawer();
+                    },
                   )
                 ],
               ),
