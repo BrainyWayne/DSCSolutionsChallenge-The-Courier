@@ -1,4 +1,6 @@
 import 'package:delivery/main.dart';
+import 'package:delivery/screens/splash.dart';
+import 'package:delivery/services/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class NavDrawer extends StatefulWidget {
@@ -130,17 +132,24 @@ class _DrawerState extends State<NavDrawer> {
             ),
           ),
           SizedBox(height: 10,),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: <Widget>[
-                Icon(Icons.label_outline, color: Colors.red,),
-                SizedBox(width: 10,),
-                Text(
-                  "Logout",
-                  style: TextStyle(color: Colors.red, fontSize: 20),
-                ),
-              ],
+          GestureDetector(
+            onTap: (){
+              Auth auth = new Auth();
+              auth.signOut();
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => SplashScreen()));
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: <Widget>[
+                  Icon(Icons.label_outline, color: Colors.red,),
+                  SizedBox(width: 10,),
+                  Text(
+                    "Logout",
+                    style: TextStyle(color: Colors.red, fontSize: 20),
+                  ),
+                ],
+              ),
             ),
           ),
           SizedBox(height: 10,),

@@ -7,6 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:custom_switch/custom_switch.dart';
 import 'package:delivery/screens/drawer.dart';
 import 'package:delivery/screens/splash.dart';
+import 'package:delivery/screens/stores.dart';
 import 'package:delivery/services/firebase_auth.dart';
 import 'package:delivery/util/globalfunctions.dart';
 import 'package:delivery/util/strings.dart';
@@ -48,6 +49,7 @@ class _HomeState extends State<Home> {
   Color mainButtonTextColor = Colors.black;
   var longitude;
   var latitude;
+  double bottomSheetSize;
 
   String darkModeText = "off";
 
@@ -77,6 +79,8 @@ class _HomeState extends State<Home> {
     rootBundle.loadString('assets/mapstyle.txt').then((string) {
       _mapStyle = string;
     });
+
+    bottomSheetSize = 0.0;
 
     getCurrentLocation();
     getUserInfo();
@@ -113,9 +117,27 @@ class _HomeState extends State<Home> {
              height: MediaQuery.of(context).size.height - 145,
           ),
           Align(
+            alignment: Alignment.bottomRight,
+            child: GestureDetector(
+              onTap: (){
+                _currentLocation(latitude, longitude);
+              },
+              child: Container(
+                margin: EdgeInsets.only(bottom: 170, right: 10),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: whiteColor
+                ),
+                child: Icon(Icons.location_on, color: blackColor,),
+                height: 50,
+                width: 50,
+              ),
+            ),
+          ),
+          Align(
             alignment: Alignment.bottomCenter,
-            child: Container(
-              height: 150,
+            child: AnimatedContainer(
+              duration: Duration(milliseconds: 300),
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   color: whiteColor,
@@ -222,6 +244,11 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                     SizedBox(height: 20,),
+                    AnimatedContainer(
+                      duration: Duration(milliseconds: 300),
+                      width: double.infinity,
+                      height: bottomSheetSize,
+                    ),
                     Row(
                       children: <Widget>[
                         GestureDetector(
@@ -247,36 +274,49 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                         ),
-                        AnimatedContainer(
-                          duration: Duration(milliseconds: 200),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 55, vertical: 12),
-                          decoration: BoxDecoration(
-                              color: mainButtonColor,
-                              borderRadius: BorderRadius.circular(30)),
-                          child: Row(
-                            children: <Widget>[
-                              Icon(Icons.filter_center_focus, color: mainButtonTextColor,),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                "MAKE REQUEST",
-                                style: TextStyle(fontWeight: FontWeight.bold, color: mainButtonTextColor),
-                              )
-                            ],
+                        GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              bottomSheetSize = 300.0;
+                            });
+                          },
+                          child: AnimatedContainer(
+                            duration: Duration(milliseconds: 200),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 55, vertical: 12),
+                            decoration: BoxDecoration(
+                                color: mainButtonColor,
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(Icons.filter_center_focus, color: mainButtonTextColor,),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "MAKE REQUEST",
+                                  style: TextStyle(fontWeight: FontWeight.bold, color: mainButtonTextColor),
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                        ClayContainer(
-                          curveType: CurveType.convex,
-                          depth: 20,
-                          borderRadius: 50,
-                          child: Container(
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(50),
-                                child: Icon(Icons.grain)),
-                            height: 45,
-                            width: 45,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Stores()));
+
+                          },
+                          child: ClayContainer(
+                            curveType: CurveType.convex,
+                            depth: 20,
+                            borderRadius: 50,
+                            child: Container(
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(50),
+                                  child: Icon(Icons.grain)),
+                              height: 45,
+                              width: 45,
+                            ),
                           ),
                         ),
                       ],
@@ -314,24 +354,8 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: GestureDetector(
-              onTap: (){
-                _currentLocation(latitude, longitude);
-              },
-              child: Container(
-                margin: EdgeInsets.only(bottom: 170, right: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: whiteColor
-                ),
-                child: Icon(Icons.location_on, color: blackColor,),
-                height: 50,
-                width: 50,
-              ),
-            ),
-          ),
+
+
           AnimatedContainer(
             height: profileContainerHeight,
             duration: Duration(milliseconds: 250),
